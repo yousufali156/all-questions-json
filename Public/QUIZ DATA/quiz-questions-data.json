@@ -1,0 +1,129 @@
+import json
+
+data = [
+    {
+        "question_en": "Which of the following best describes the role of a server?",
+        "options": {
+            "A": "Executing user commands on a local computer",
+            "B": "Storing data on external hard drives",
+            "C": "Providing resources or services to clients over a network",
+            "D": "Running graphical user interfaces for applications"
+        },
+        "correct_answer": "C",
+        "question_bn": "নিম্নের কোনটি সার্ভারের ভূমিকা সঠিকভাবে বর্ণনা করে?",
+        "answer_bn": "ক্লায়েন্টদেরকে নেটওয়ার্কের মাধ্যমে রিসোর্স বা সার্ভিস সরবরাহ করা।"
+    },
+    {
+        "question_en": "What distinguishes Node.js from traditional server-side languages?",
+        "options": {
+            "A": "Node.js is statically typed, while traditional server-side languages are dynamically typed.",
+            "B": "Node.js is primarily used for client-side scripting, while traditional server-side languages are used for server-side development.",
+            "C": "Node.js operates on an event-driven, non-blocking I/O model, while traditional server-side languages often use blocking I/O.",
+            "D": "Node.js is a compiled language, while traditional server-side languages are interpreted."
+        },
+        "correct_answer": "C",
+        "question_bn": "Node.js কিভাবে প্রচলিত সার্ভার-সাইড ভাষা থেকে আলাদা?",
+        "answer_bn": "Node.js ইভেন্ট-চালিত এবং non-blocking I/O মডেল ব্যবহার করে, যেখানে প্রচলিত ভাষাগুলো প্রায়শই blocking I/O ব্যবহার করে।"
+    },
+    {
+        "question_en": "What does API stand for?",
+        "options": {
+            "A": "Advanced Programming Interface",
+            "B": "Application Programming Interface",
+            "C": "Automated Program Interaction",
+            "D": "Accessible Program Interface"
+        },
+        "correct_answer": "B",
+        "question_bn": "API এর পূর্ণরূপ কী?",
+        "answer_bn": "Application Programming Interface"
+    },
+    {
+        "question_en": "How will you get the value from the input box using the useRef() hook?",
+        "code": "const nameRef = useRef()\n<input type=\"text\" ref={nameRef} placeholder=\"name\"/>",
+        "options": {
+            "A": "nameRef.current",
+            "B": "nameRef.target.value",
+            "C": "nameRef.current.value",
+            "D": "nameRef.value"
+        },
+        "correct_answer": "C",
+        "question_bn": "useRef() হুক ব্যবহার করে ইনপুট বক্স থেকে মান কীভাবে পাবেন?",
+        "answer_bn": "nameRef.current.value"
+    },
+    {
+        "question_en": "Which of the following best describes Node.js?",
+        "options": {
+            "A": "A JavaScript runtime built on Chrome's V8 JavaScript engine",
+            "B": "A front-end framework for building user interfaces",
+            "C": "An object-oriented programming language",
+            "D": "A relational database management system"
+        },
+        "correct_answer": "A",
+        "question_bn": "নিম্নের কোনটি Node.js কে সঠিকভাবে বর্ণনা করে?",
+        "answer_bn": "এটি Chrome-এর V8 ইঞ্জিনের উপর ভিত্তি করে তৈরি একটি JavaScript রানটাইম।"
+    },
+    {
+        "question_en": "Which of the following best describes Express.js?",
+        "options": {
+            "A": "A front-end framework for building user interfaces",
+            "B": "A database management system",
+            "C": "A JavaScript runtime environment",
+            "D": "A minimalist web application framework for Node.js"
+        },
+        "correct_answer": "D",
+        "question_bn": "নিম্নের কোনটি Express.js কে সঠিকভাবে বর্ণনা করে?",
+        "answer_bn": "Node.js এর জন্য একটি মিনিমালিস্ট ওয়েব অ্যাপ্লিকেশন ফ্রেমওয়ার্ক।"
+    },
+    {
+        "question_en": "What feature of Express.js allows developers to easily handle middleware functions?",
+        "options": {
+            "A": "Dependency injection",
+            "B": "Error handling middleware",
+            "C": "Route parameterization",
+            "D": "Middleware chaining"
+        },
+        "correct_answer": "D",
+        "question_bn": "Express.js-এ middleware ফাংশন সহজে পরিচালনার জন্য কোন ফিচার ব্যবহার করা হয়?",
+        "answer_bn": "Middleware chaining"
+    },
+    {
+        "question_en": "What is DBMS?",
+        "options": {
+            "A": "DBMS is a collection of queries",
+            "B": "DBMS is a high-level language",
+            "C": "DBMS is a programming language",
+            "D": "DBMS stores, modifies and retrieves data"
+        },
+        "correct_answer": "D",
+        "question_bn": "DBMS কী?",
+        "answer_bn": "DBMS ডেটা সংরক্ষণ, পরিবর্তন এবং পুনরুদ্ধার করে।"
+    },
+    {
+        "question_en": "Which HTTP method should be used in case of storing data into database via API?",
+        "options": {
+            "A": "Get",
+            "B": "Post",
+            "C": "Delete",
+            "D": "Update"
+        },
+        "correct_answer": "B",
+        "question_bn": "API এর মাধ্যমে ডেটাবেইসে ডেটা সংরক্ষণের জন্য কোন HTTP মেথড ব্যবহার করা হয়?",
+        "answer_bn": "POST"
+    },
+    {
+        "question_en": "What does the CSS property \"box-sizing: border-box;\" do?",
+        "options": {
+            "A": "It adds a border around the box",
+            "B": "It includes padding and border in the element's total width and height",
+            "C": "It removes the box model from the element",
+            "D": "It adjusts the spacing between elements"
+        },
+        "correct_answer": "B",
+        "question_bn": "CSS-এ 'box-sizing: border-box;' কী করে?",
+        "answer_bn": "এটি উপাদানের মোট প্রস্থ ও উচ্চতার মধ্যে padding ও border-কে অন্তর্ভুক্ত করে।"
+    }
+]
+
+# Output the JSON
+json_output = json.dumps(data, indent=2, ensure_ascii=False)
+print(json_output)
